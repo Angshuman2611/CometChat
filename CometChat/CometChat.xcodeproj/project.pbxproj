@@ -13,6 +13,16 @@
 		8F10D053286ED3CF007DC3E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F10D051286ED3CF007DC3E2 /* Main.storyboard */; };
 		8F10D055286ED3D0007DC3E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F10D054286ED3D0007DC3E2 /* Assets.xcassets */; };
 		8F10D058286ED3D0007DC3E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F10D056286ED3D0007DC3E2 /* LaunchScreen.storyboard */; };
+		8F10D061286ED475007DC3E2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8F10D060286ED475007DC3E2 /* Alamofire */; };
+		8F10D064286ED48C007DC3E2 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 8F10D063286ED48C007DC3E2 /* SwiftyJSON */; };
+		8F10D06F286ED4A0007DC3E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D066286ED49F007DC3E2 /* Constants.swift */; };
+		8F10D070286ED4A0007DC3E2 /* APIURLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D067286ED49F007DC3E2 /* APIURLConstants.swift */; };
+		8F10D071286ED4A0007DC3E2 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D068286ED49F007DC3E2 /* StringConstants.swift */; };
+		8F10D073286ED4A0007DC3E2 /* AlamoWebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D06B286ED49F007DC3E2 /* AlamoWebServices.swift */; };
+		8F10D074286ED4A0007DC3E2 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D06D286ED4A0007DC3E2 /* URLExtension.swift */; };
+		8F10D075286ED4A0007DC3E2 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D06E286ED4A0007DC3E2 /* Bindable.swift */; };
+		8F10D07C286ED53A007DC3E2 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D07B286ED53A007DC3E2 /* HomeModel.swift */; };
+		8F10D07E286ED597007DC3E2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F10D07D286ED597007DC3E2 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,14 @@
 		8F10D054286ED3D0007DC3E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F10D057286ED3D0007DC3E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F10D059286ED3D0007DC3E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F10D066286ED49F007DC3E2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8F10D067286ED49F007DC3E2 /* APIURLConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIURLConstants.swift; sourceTree = "<group>"; };
+		8F10D068286ED49F007DC3E2 /* StringConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		8F10D06B286ED49F007DC3E2 /* AlamoWebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamoWebServices.swift; sourceTree = "<group>"; };
+		8F10D06D286ED4A0007DC3E2 /* URLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		8F10D06E286ED4A0007DC3E2 /* Bindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		8F10D07B286ED53A007DC3E2 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		8F10D07D286ED597007DC3E2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F10D064286ED48C007DC3E2 /* SwiftyJSON in Frameworks */,
+				8F10D061286ED475007DC3E2 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +76,87 @@
 		8F10D04A286ED3CF007DC3E2 /* CometChat */ = {
 			isa = PBXGroup;
 			children = (
+				8F10D077286ED4F3007DC3E2 /* Model */,
+				8F10D078286ED4F9007DC3E2 /* View */,
+				8F10D079286ED4FF007DC3E2 /* ViewModel */,
+				8F10D076286ED4DB007DC3E2 /* Resources */,
+				8F10D065286ED49F007DC3E2 /* Constants */,
+				8F10D06A286ED49F007DC3E2 /* Networking */,
+				8F10D06C286ED4A0007DC3E2 /* Utility */,
 				8F10D04B286ED3CF007DC3E2 /* AppDelegate.swift */,
 				8F10D04D286ED3CF007DC3E2 /* SceneDelegate.swift */,
-				8F10D04F286ED3CF007DC3E2 /* ViewController.swift */,
-				8F10D051286ED3CF007DC3E2 /* Main.storyboard */,
-				8F10D054286ED3D0007DC3E2 /* Assets.xcassets */,
-				8F10D056286ED3D0007DC3E2 /* LaunchScreen.storyboard */,
 				8F10D059286ED3D0007DC3E2 /* Info.plist */,
 			);
 			path = CometChat;
+			sourceTree = "<group>";
+		};
+		8F10D065286ED49F007DC3E2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8F10D066286ED49F007DC3E2 /* Constants.swift */,
+				8F10D067286ED49F007DC3E2 /* APIURLConstants.swift */,
+				8F10D068286ED49F007DC3E2 /* StringConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		8F10D06A286ED49F007DC3E2 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8F10D06B286ED49F007DC3E2 /* AlamoWebServices.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8F10D06C286ED4A0007DC3E2 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				8F10D06D286ED4A0007DC3E2 /* URLExtension.swift */,
+				8F10D06E286ED4A0007DC3E2 /* Bindable.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		8F10D076286ED4DB007DC3E2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8F10D054286ED3D0007DC3E2 /* Assets.xcassets */,
+				8F10D056286ED3D0007DC3E2 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8F10D077286ED4F3007DC3E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F10D07B286ED53A007DC3E2 /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8F10D078286ED4F9007DC3E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F10D07A286ED511007DC3E2 /* HomeScreen */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8F10D079286ED4FF007DC3E2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8F10D07D286ED597007DC3E2 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8F10D07A286ED511007DC3E2 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8F10D04F286ED3CF007DC3E2 /* ViewController.swift */,
+				8F10D051286ED3CF007DC3E2 /* Main.storyboard */,
+			);
+			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +175,10 @@
 			dependencies = (
 			);
 			name = CometChat;
+			packageProductDependencies = (
+				8F10D060286ED475007DC3E2 /* Alamofire */,
+				8F10D063286ED48C007DC3E2 /* SwiftyJSON */,
+			);
 			productName = CometChat;
 			productReference = 8F10D048286ED3CF007DC3E2 /* CometChat.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +207,10 @@
 				Base,
 			);
 			mainGroup = 8F10D03F286ED3CF007DC3E2;
+			packageReferences = (
+				8F10D05F286ED475007DC3E2 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8F10D062286ED48C007DC3E2 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 8F10D049286ED3CF007DC3E2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +239,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F10D050286ED3CF007DC3E2 /* ViewController.swift in Sources */,
+				8F10D07E286ED597007DC3E2 /* HomeViewModel.swift in Sources */,
 				8F10D04C286ED3CF007DC3E2 /* AppDelegate.swift in Sources */,
+				8F10D071286ED4A0007DC3E2 /* StringConstants.swift in Sources */,
 				8F10D04E286ED3CF007DC3E2 /* SceneDelegate.swift in Sources */,
+				8F10D06F286ED4A0007DC3E2 /* Constants.swift in Sources */,
+				8F10D074286ED4A0007DC3E2 /* URLExtension.swift in Sources */,
+				8F10D070286ED4A0007DC3E2 /* APIURLConstants.swift in Sources */,
+				8F10D073286ED4A0007DC3E2 /* AlamoWebServices.swift in Sources */,
+				8F10D07C286ED53A007DC3E2 /* HomeModel.swift in Sources */,
+				8F10D075286ED4A0007DC3E2 /* Bindable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +464,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F10D05F286ED475007DC3E2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.9.0;
+			};
+		};
+		8F10D062286ED48C007DC3E2 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F10D060286ED475007DC3E2 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F10D05F286ED475007DC3E2 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		8F10D063286ED48C007DC3E2 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F10D062286ED48C007DC3E2 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8F10D040286ED3CF007DC3E2 /* Project object */;
 }
