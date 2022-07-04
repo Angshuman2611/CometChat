@@ -21,7 +21,7 @@ class UserRepoViewController: UIViewController {
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
-        viewModel.fetchRepos(repoPath: "iOSxBlockchain")
+        viewModel.fetchRepos(repoPath: UserDefaults.userName ?? "iOSxBlockchain")
         mTableView.delegate = self
         mTableView.dataSource = self
         addListerner()

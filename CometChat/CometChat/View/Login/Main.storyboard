@@ -31,17 +31,27 @@
                                     <action selector="loginTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SdU-CA-u6c"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="imB-2t-vd0">
+                                <rect key="frame" x="182" y="486" width="50" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="ePw-5e-v2b"/>
+                                    <constraint firstAttribute="height" constant="54" id="p5t-vK-EbG"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="imB-2t-vd0" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="0Ss-9e-gbX"/>
                             <constraint firstItem="hJ4-xM-riV" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="7dW-dv-rmh"/>
+                            <constraint firstItem="imB-2t-vd0" firstAttribute="top" secondItem="hJ4-xM-riV" secondAttribute="bottom" constant="8" id="8aj-C5-YSq"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hJ4-xM-riV" secondAttribute="trailing" constant="20" id="K7H-Hz-ZyT"/>
                             <constraint firstItem="hJ4-xM-riV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Z9S-sG-wA6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZDZ-nJ-Q8R"/>
                     <connections>
+                        <outlet property="activityLoder" destination="imB-2t-vd0" id="bwF-m8-iGo"/>
                         <outlet property="loginBtn" destination="hJ4-xM-riV" id="ql6-F8-HBd"/>
                     </connections>
                 </viewController>

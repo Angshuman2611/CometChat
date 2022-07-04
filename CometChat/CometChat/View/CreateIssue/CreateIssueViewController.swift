@@ -13,6 +13,7 @@ class CreateIssueViewController: UIViewController {
     
     let viewModel = CreateIssueViewModel()
     
+    @IBOutlet weak var activityLoader: UIActivityIndicatorView!
     @IBOutlet weak var titleText: UITextField!
     @IBOutlet weak var createBtn: UIButton!
     @IBOutlet weak var descriptionText: UITextView!
@@ -27,11 +28,15 @@ class CreateIssueViewController: UIViewController {
         descriptionText.layer.borderWidth = 1
         descriptionText.layer.borderColor = UIColor.gray.cgColor
         createBtn.layer.cornerRadius = 18
+        activityLoader.isHidden = true
     }
     
     private func addListener() {
          viewModel.itemData.bind { result in
-             self.navigationController?.popViewController(animated: true)
+             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                 self.activityLoader.stopAnimating()
+                 self.navigationController?.popViewController(animated: true)
+             }
          }
          
         
@@ -44,6 +49,8 @@ class CreateIssueViewController: UIViewController {
     
     @IBAction func CreateBtnAction(_ sender: UIButton) {
         if titleText.text != "" && descriptionText.text != "" {
+            self.activityLoader.isHidden = false
+            self.activityLoader.startAnimating()
             viewModel.createIssue(repoPath: itemData.fullName!, title: titleText.text!, body: descriptionText.text!)
         }else {
             print("Can't be empty")

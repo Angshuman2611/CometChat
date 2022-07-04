@@ -45,7 +45,7 @@ class ViewController: UIViewController {
               action: #selector(rightButtonAction)
         )
         let userRepos = UIBarButtonItem.init(
-              title: "Added Repo",
+              title: "My Repo",
               style: .done,
               target: self,
               action: #selector(userRepos)

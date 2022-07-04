@@ -10,6 +10,7 @@ import OAuthSwift
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var activityLoder: UIActivityIndicatorView!
     private var oauthswift: OAuth2Swift!
     let viewModel = LoginViewModel()
 
@@ -31,19 +32,22 @@ class LoginViewController: UIViewController {
     }
     
     private func setup() {
-        
+        activityLoder.isHidden = true
         loginBtn.layer.cornerRadius = 14
         appListener()
     }
     
     private func appListener() {
         viewModel.itemData.bind { res in
+            self.activityLoder.stopAnimating()
             let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
     @IBAction func loginTap(_ sender: Any) {
+        activityLoder.isHidden = false
+        activityLoder.startAnimating()
         doOAuthGithub()
     }
     

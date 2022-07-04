@@ -9,6 +9,8 @@ import UIKit
 
 class RepoViewController: UIViewController {
     
+    private var pullControl = UIRefreshControl()
+    
     var itemData = Item()
     var repoDetailModel = [RepoDetailModel]()
     let viewModel = RepoDetailViewModel()
@@ -24,12 +26,13 @@ class RepoViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         viewModel.fetchRepos(repoPath: itemData.fullName!)
         viewModel.fetchPRs(repoPath: itemData.fullName!)
-        addListener()
     }
     
     private func setup() {
         mTableView.delegate = self
         mTableView.dataSource = self
+        pullControl.addTarget(self, action: #selector(refreshListData(_:)), for: .valueChanged)
+        mTableView.refreshControl = pullControl
         navigationController?.navigationBar.isHidden = true
         repoName.text = "Repo name: \(itemData.name ?? "")"
         viewModel.fetchRepos(repoPath: itemData.fullName!)
@@ -55,6 +58,12 @@ class RepoViewController: UIViewController {
                 self.prCountText.text = "PR count: \(result!.count)"
             }
         }
+    }
+    
+    @objc private func refreshListData(_ sender: Any) {
+        viewModel.fetchRepos(repoPath: itemData.fullName!)
+        viewModel.fetchPRs(repoPath: itemData.fullName!)
+        self.pullControl.endRefreshing()
     }
 
     @IBAction func backBtn(_ sender: UIButton) {
