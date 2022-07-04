@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6jJ-nJ-wpc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="CometChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="URx-UR-zsk">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchCell" rowHeight="60" id="F4w-TA-G8U" customClass="SearchCell" customModule="CometChat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F4w-TA-G8U" id="ZTw-p6-wzi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bls-yh-g77">
+                                                    <rect key="frame" x="20" y="19" width="333" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhf-tW-fMI">
+                                                    <rect key="frame" x="363" y="14" width="31" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="31" id="9Sw-wZ-Fsd"/>
+                                                        <constraint firstAttribute="height" constant="31" id="ZBe-li-EtH"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="watchface.applewatch.case" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="WatchlistBtn:" destination="F4w-TA-G8U" eventType="touchUpInside" id="hBC-74-Cd5"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Bls-yh-g77" firstAttribute="leading" secondItem="ZTw-p6-wzi" secondAttribute="leading" constant="20" id="5IN-yd-CIv"/>
+                                                <constraint firstItem="Yhf-tW-fMI" firstAttribute="leading" secondItem="Bls-yh-g77" secondAttribute="trailing" constant="10" id="BUY-5O-FRD"/>
+                                                <constraint firstAttribute="trailing" secondItem="Yhf-tW-fMI" secondAttribute="trailing" constant="20" id="NAs-DF-gQo"/>
+                                                <constraint firstItem="Yhf-tW-fMI" firstAttribute="centerY" secondItem="Bls-yh-g77" secondAttribute="centerY" id="TEk-TL-GlG"/>
+                                                <constraint firstAttribute="bottom" secondItem="Bls-yh-g77" secondAttribute="bottom" constant="20" id="XIw-Q0-3cr"/>
+                                                <constraint firstItem="Bls-yh-g77" firstAttribute="top" secondItem="ZTw-p6-wzi" secondAttribute="top" constant="19" id="ZZ1-d4-lJf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="repoName" destination="Bls-yh-g77" id="Ifq-1R-zbR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="URx-UR-zsk" secondAttribute="trailing" id="4M6-hY-lTy"/>
+                            <constraint firstItem="URx-UR-zsk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fIr-eR-JpR"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="URx-UR-zsk" secondAttribute="bottom" id="gu6-6w-oqC"/>
+                            <constraint firstItem="URx-UR-zsk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qIx-5d-cGK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sDg-DG-bqQ"/>
+                    <connections>
+                        <outlet property="mTableView" destination="URx-UR-zsk" id="rBN-qi-jHr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="82.366071428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BTu-Vp-ymi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6jJ-nJ-wpc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="C1s-wl-hCR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="owK-po-jh2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JDl-Tj-FOS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="82.366071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="watchface.applewatch.case" catalog="system" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

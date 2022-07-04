@@ -18,8 +18,8 @@ class AlamoWebServices {
     typealias onFailure = ((Error) -> Void)
 
     // GET API (QUERY STRING)
-    func getApiWithQueryParams<T: Decodable>(url: URL, params: Parameters, type: T.Type, onSuccess: @escaping onSuccess, onFailure: @escaping onFailure) {
-        Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.queryString, headers: nil).responseJSON { response in
+    func getApiWithQueryParams<T: Decodable>(url: URL, params: Parameters?, type: T.Type, onSuccess: @escaping onSuccess, onFailure: @escaping onFailure) {
+        Alamofire.request(url, method: .get, parameters: params ?? nil, encoding: URLEncoding.queryString, headers: AlamoHeaders.headers).responseJSON { response in
             
             if response.result.isSuccess {
                 do{
@@ -36,7 +36,7 @@ class AlamoWebServices {
     
     // POST API (QUERY STRING)
     func postApiWithQueryParams(url: URL, params: Parameters, onSuccess: @escaping _onSuccess, onFailure: @escaping onFailure) {
-        Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.queryString, headers: nil).responseJSON { response in
+        Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.queryString, headers: AlamoHeaders.headers).responseJSON { response in
             
             if response.result.isSuccess {
                 onSuccess(JSON(response.result.value!))
@@ -49,8 +49,9 @@ class AlamoWebServices {
     
     // POST API (HTTP BODY)
     func postApiWithBodyParams(url: URL, params: Parameters, onSuccess: @escaping _onSuccess, onFailure: @escaping onFailure) {
-        Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.httpBody, headers: nil).responseJSON { response in
-            
+        
+        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: AlamoHeaders.headers).responseJSON { response in
+     
             if response.result.isSuccess {
                 onSuccess(JSON(response.result.value!))
             } else if response.result.isFailure {

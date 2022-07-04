@@ -1,6 +1,6 @@
 //
 //  URLExtension.swift
-//  NewsApp
+//  CometChat
 //
 //  Created by Angshuman Das on 07/04/1401 AP.
 //

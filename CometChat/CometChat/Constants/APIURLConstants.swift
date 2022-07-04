@@ -12,12 +12,18 @@ extension Constants{
         static var baseURL = "https://api.github.com/"
     }
     
+    struct Module {
+        static var repo = "repos/"
+        static var users = "users/"
+    }
+    
     struct EndPoints{
         static var searchRepositories = "search/repositories"
-        static var userRepositories = "users/\(Constants.ownerName!)/repos"
-        static var openIssues = "repos/\(Constants.ownerName!)/\(Constants.repoName!)/issues"
-        static var pullRequests = "repos/\(Constants.ownerName!)/\(Constants.repoName!)/pulls"
-        static var createIssue = "repos/\(Constants.ownerName!)/\(Constants.repoName!)/issues"
+        static var userRepositories = "/repos"
+        static var openIssues = "/issues"
+        static var pullRequests = "/pulls"
+        static var createIssue = "/issues"
+        static var user = "user"
     }
 }
 
