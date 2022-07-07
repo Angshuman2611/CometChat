@@ -33,10 +33,8 @@ class CreateIssueViewController: UIViewController {
     
     private func addListener() {
          viewModel.itemData.bind { result in
-             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                  self.activityLoader.stopAnimating()
                  self.navigationController?.popViewController(animated: true)
-             }
          }
          
         
